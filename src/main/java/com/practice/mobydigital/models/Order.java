@@ -1,6 +1,5 @@
 package com.practice.mobydigital.models;
 
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,7 +18,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -43,7 +41,7 @@ public class Order {
     private Boolean paid;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name="id_customer")
+    @JoinColumn(name="id_customer")
     private Customer customer;
 
     @OneToMany(fetch = FetchType.LAZY)
