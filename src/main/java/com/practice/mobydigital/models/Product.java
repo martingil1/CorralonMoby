@@ -1,5 +1,6 @@
 package com.practice.mobydigital.models;
 
+import com.practice.mobydigital.models.Dtos.AddProductDto;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,5 +39,17 @@ public class Product {
     @NotNull
     @Column(name = "current_stock")
     private Integer currentStock;
+
+    public static Product fromDTO(AddProductDto productDto) {
+
+        return Product.builder()
+                .id(productDto.getIdProduct())
+                .name(productDto.getName())
+                .trademark(productDto.getTrademark())
+                .priceUnit(productDto.getPriceUnit())
+                .currentStock(productDto.getCurrentStock())
+                .build();
+
+    }
 
 }
