@@ -22,9 +22,9 @@ public class ProductService {
     public Product add(AddProductDto p){
 
         Product product = Product.fromDTO(p);
-        if(product.equals(productRepository.getOne(p.getIdProduct()))){
-            throw new ProductAlreadyExistsException();
-        }
+        if(productRepository.existsById(product.getId())) throw new ProductAlreadyExistsException();
+       // productRepository.getById(p.getIdProduct())
+         //       .orElseThrow(ProductAlreadyExistsException::new);
 
         return productRepository.save(product);
     }

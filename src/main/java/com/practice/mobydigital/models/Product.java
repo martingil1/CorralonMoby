@@ -49,7 +49,5 @@ public class Product {
                 .priceUnit(productDto.getPriceUnit())
                 .currentStock(productDto.getCurrentStock())
                 .build();
-
     }
-
 }
