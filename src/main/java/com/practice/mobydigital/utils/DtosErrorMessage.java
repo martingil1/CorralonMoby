@@ -12,5 +12,8 @@ public class DtosErrorMessage {
 
     public static final String MANDATORY_TRADEMARK = "La marca es obligatoria";
 
+    public static final String MANDATORY_PRICE_UNIT = "El precio del producto es obligatorio";
+
+    public static final String MANDATORY_CURRENT_STOCK = "El stock del producto es obligatorio";
 
 }
