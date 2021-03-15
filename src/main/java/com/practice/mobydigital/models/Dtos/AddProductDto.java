@@ -2,7 +2,6 @@ package com.practice.mobydigital.models.Dtos;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,9 +32,7 @@ public class AddProductDto {
     @NotBlank(message = MANDATORY_TRADEMARK)
     private String trademark;
 
-    @NotNull
     private Double priceUnit;
 
-    @NotNull
     private Integer currentStock;
 }
