@@ -11,8 +11,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import java.lang.reflect.MalformedParameterizedTypeException;
-
 import static com.practice.mobydigital.utils.DtosErrorMessage.LONG_ID;
 import static com.practice.mobydigital.utils.DtosErrorMessage.MANDATORY_CURRENT_STOCK;
 import static com.practice.mobydigital.utils.DtosErrorMessage.MANDATORY_ID;
